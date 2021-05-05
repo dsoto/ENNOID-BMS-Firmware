@@ -1,10 +1,16 @@
+# GCC Build
+
+This branch contains the files to build the firmware using `arm-none-eabi-gcc`.
+This firmware builds but is not tested yet.
+Use caution.
+
 # Other parts of this project
 
 This is the firmware repository containing all firmware source files. There are three more repositories for this project:
 
 [ENNOID-BMS Hardware](https://github.com/EnnoidMe/ENNOID-BMS) The hardware sourcefiles.
 
-[ENNOID-BMS Bootloader](https://github.com/EnnoidMe/DieBieMS-Bootloader) Same as DieBieMS bootloader. Can be flashed with the BMS Tool in the firmware tab or with an STlink-V2. 
+[ENNOID-BMS Bootloader](https://github.com/EnnoidMe/DieBieMS-Bootloader) Same as DieBieMS bootloader. Can be flashed with the BMS Tool in the firmware tab or with an STlink-V2.
 
 [ENNOID-BMS Configuration tool](https://github.com/EnnoidMe/ENNOID-BMS-Tool) the tool to configure the ENNOID-BMS and upload the bootloader / update the main firmware.
 
