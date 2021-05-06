@@ -1,3 +1,17 @@
+# DieBieMS GCC Port
+
+This branch contains the files to build the firmware using `arm-none-eabi-gcc`.
+With the arm gcc tool chain installed, `make` will compile the hardware.
+
+On version 0.9 hardware, this firmware build loads, enables the load output, and shows the splash screen message.
+
+Known issue: 
+
+- the BMS does not turn off with the toggle switch on the power connector.
+- the BMS only connects in limited communication mode to version 0.27 of the DieBieMS Tool.
+
+Proceed with caution as you attempt to debug any issues.
+
 # Other parts of this project
 This is the firmware repository containing all firmware source files. There are three more repositories for this project:<br>
 [DieBieMS Hardware](https://github.com/DieBieEngineering/DieBieMS) The hardware sourcefiles.<br>
