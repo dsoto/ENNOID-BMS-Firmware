@@ -1,28 +1,31 @@
-# GCC makefile for ENNOID-BMS-SS firmware
+# GCC makefile for DieBieMS firmware
 
 SRCS  = ./Main/main.c
-SRCS += ./Modules/src/modCAN.c
-SRCS += ./Modules/src/modCommands.c
-SRCS += ./Modules/src/modConfig.c
-SRCS += ./Modules/src/modDelay.c
-SRCS += ./Modules/src/modDisplay.c
-SRCS += ./Modules/src/modEffect.c
-SRCS += ./Modules/src/modFlash.c
-SRCS += ./Modules/src/modOperationalState.c
-SRCS += ./Modules/src/modPowerElectronics.c
-SRCS += ./Modules/src/modPowerState.c
-SRCS += ./Modules/src/modStateOfCharge.c
-SRCS += ./Modules/src/modTerminal.c
-SRCS += ./Modules/src/modUART.c
+SRCS += ./Modules/Src/modCAN.c
+SRCS += ./Modules/Src/modCommands.c
+SRCS += ./Modules/Src/modConfig.c
+SRCS += ./Modules/Src/modDelay.c
+SRCS += ./Modules/Src/modDisplay.c
+SRCS += ./Modules/Src/modEffect.c
+SRCS += ./Modules/Src/modFlash.c
+SRCS += ./Modules/Src/modOperationalState.c
+SRCS += ./Modules/Src/modPowerElectronics.c
+SRCS += ./Modules/Src/modPowerState.c
+SRCS += ./Modules/Src/modStateOfCharge.c
+SRCS += ./Modules/Src/modTerminal.c
+SRCS += ./Modules/Src/modUART.c
+SRCS += ./Modules/Src/modHiAmp.c
 
 SRCS += ./Drivers/SWDrivers/Src/driverSWStorageManager.c
 SRCS += ./Drivers/SWDrivers/Src/driverSWSSD1306.c
-SRCS += ./Drivers/SWDrivers/Src/driverSWLTC6804.c
+SRCS += ./Drivers/SWDrivers/Src/driverSWLTC6803.c
 SRCS += ./Drivers/SWDrivers/Src/driverSWISL28022.c
 SRCS += ./Drivers/SWDrivers/Src/driverSWADC128D818.c
 SRCS += ./Drivers/SWDrivers/Src/driverSWUART2.c
+SRCS += ./Drivers/SWDrivers/Src/driverSWDCDC.c
+SRCS += ./Drivers/SWDrivers/Src/driverSWPCAL6416.c
 SRCS += ./Drivers/SWDrivers/Src/driverSWSHT21.c
-SRCS += ./Drivers/SWDrivers/Src/driverSWHTC1080.c
+SRCS += ./Drivers/SWDrivers/Src/driverSWEMC2305.c
 
 SRCS += ./Drivers/HWDrivers/Src/driverHWADC.c
 SRCS += ./Drivers/HWDrivers/Src/driverHWEEPROM.c
@@ -55,6 +58,7 @@ SRCS += ./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.c
 SRCS += ./Device/stm32f3xx_it.c
 SRCS += ./Device/stm32f3xx_hal_msp.c
 SRCS += ./Drivers/CMSIS/Device/ST/STM32F3xx/Source/Templates/system_stm32f3xx.c
+# SRCS += ./GCC/DBMS-startup.c
 
 SRCS += ./Libraries/Scr/libBuffer.c
 SRCS += ./Libraries/Scr/libCRC.c
@@ -85,7 +89,7 @@ CC = arm-none-eabi-gcc
 OBJCOPY = arm-none-eabi-objcopy
 OBJDUMP = arm-none-eabi-objdump
 
-CFLAGS  = -std=gnu99 -g -Os -Wall
+CFLAGS  = -std=gnu99 -g -O0 -Wall
 CFLAGS += -mlittle-endian -mthumb -mthumb-interwork
 CFLAGS += -mcpu=cortex-m4 -fsingle-precision-constant
 CFLAGS += -Wdouble-promotion
