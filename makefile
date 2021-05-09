@@ -64,6 +64,8 @@ SRCS += ./Libraries/Scr/libGraphics.c
 SRCS += ./Libraries/Scr/libPacket.c
 SRCS += ./Libraries/Scr/libRingbuffer.c
 
+SRCS += ./GCC/EBMS-startup.c
+
 # TODO: place object files in separate directory
 OBJS = $(SRCS:.c=.o)
 
@@ -78,8 +80,6 @@ INCLUDE += -I ./Modules/Inc
 INCLUDE += -I ./CubeMX/Inc
 
 LINKER_SCRIPT = ./GCC/EBMS-linker.ld
-# STARTUP = ./GCC/EBMS-startup.c
-STARTUP = ./GCC/startup_stm32f303xc.s
 
 CC = arm-none-eabi-gcc
 OBJCOPY = arm-none-eabi-objcopy
@@ -107,7 +107,7 @@ all: main.elf main.bin main.hex main-St.txt main-d.txt main-h.txt main-nm.txt
 
 # $(OBJS): | build/
 
-main.elf: $(OBJS) $(STARTUP)
+main.elf: $(OBJS)
 	$(CC) -T$(LINKER_SCRIPT) $(CFLAGS) $(LINKER_FLAGS) $^ -o $@
 
 main.bin: main.elf
