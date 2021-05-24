@@ -139,7 +139,7 @@ void modConfigLoadDefaultConfig(modConfigGeneralConfigStructTypedef *configLocat
 	configLocation->maxMismatchThreshold											     = 0.010f;									// If mismatch is under this threshold for timeoutChargingCompletedMinimalMismatch determin fully charged.
 	configLocation->chargerEnabledThreshold										     = 0.5f;										// If charge current > X.XA stay in charging mode and dont power off.
 	configLocation->timeoutChargerDisconnected								     = 2000;										// Wait for X seconds to respond to charger disconnect.
-	configLocation->minimalPrechargePercentage								     = 0.90f;										// output should be at a minimal of 80% of input voltage.
+	configLocation->minimalPrechargePercentage								     = 0.80f;										// output should be at a minimal of 80% of input voltage.
 	configLocation->timeoutLCPreCharge												     = 1.5*1000;								// Precharge error timeout, allow 1.5 seconds pre-charge time before declaring load error.
 	configLocation->maxAllowedCurrent													     = 1000.0f;									// Allow max XXXA trough BMS.
 	configLocation->allowedTempBattDischargingMax                  = 75.0f;                   // Max battery temperature where discharging is still allowed
@@ -239,7 +239,7 @@ void modConfigLoadDefaultConfig(modConfigGeneralConfigStructTypedef *configLocat
 	configLocation->maxMismatchThreshold											     = 0.010f;									// If mismatch is under this threshold for timeoutChargingCompletedMinimalMismatch determin fully charged.
 	configLocation->chargerEnabledThreshold										     = 0.5f;										// If charge current > X.XA stay in charging mode and dont power off.
 	configLocation->timeoutChargerDisconnected								     = 2000;										// Wait for X seconds to respond to charger disconnect.
-	configLocation->minimalPrechargePercentage								     = 0.90f;										// output should be at a minimal of 80% of input voltage.
+	configLocation->minimalPrechargePercentage								     = 0.80f;										// output should be at a minimal of 80% of input voltage.
 	configLocation->timeoutLCPreCharge												     = 1.5*1000;								// Precharge error timeout, allow 1.5 seconds pre-charge time before declaring load error.
 	configLocation->maxAllowedCurrent													     = 1000.0f;									// Allow max XXXA trough BMS.
 	configLocation->allowedTempBattDischargingMax                  = 75.0f;                   // Max battery temperature where discharging is still allowed
@@ -340,7 +340,7 @@ void modConfigLoadDefaultConfig(modConfigGeneralConfigStructTypedef *configLocat
 	configLocation->maxMismatchThreshold											     = 0.010f;									// If mismatch is under this threshold for timeoutChargingCompletedMinimalMismatch determin fully charged.
 	configLocation->chargerEnabledThreshold										     = 0.5f;										// If charge current > X.XA stay in charging mode and dont power off.
 	configLocation->timeoutChargerDisconnected								     = 2000;										// Wait for X seconds to respond to charger disconnect.
-	configLocation->minimalPrechargePercentage								     = 0.90f;										// output should be at a minimal of 80% of input voltage.
+	configLocation->minimalPrechargePercentage								     = 0.80f;										// output should be at a minimal of 80% of input voltage.
 	configLocation->timeoutLCPreCharge												     = 1.5*1000;								// Precharge error timeout, allow 1.5 seconds pre-charge time before declaring load error.
 	configLocation->maxAllowedCurrent													     = 1000.0f;									// Allow max XXXA trough BMS.
 	configLocation->allowedTempBattDischargingMax                  = 105.0f;                   // Max battery temperature where discharging is still allowed
@@ -440,7 +440,7 @@ void modConfigLoadDefaultConfig(modConfigGeneralConfigStructTypedef *configLocat
 	configLocation->maxMismatchThreshold											     = 0.010f;									// If mismatch is under this threshold for timeoutChargingCompletedMinimalMismatch determin fully charged.
 	configLocation->chargerEnabledThreshold										     = 0.5f;										// If charge current > X.XA stay in charging mode and dont power off.
 	configLocation->timeoutChargerDisconnected								     = 2000;										// Wait for X seconds to respond to charger disconnect.
-	configLocation->minimalPrechargePercentage								     = 0.90f;										// output should be at a minimal of 80% of input voltage.
+	configLocation->minimalPrechargePercentage								     = 0.80f;										// output should be at a minimal of 80% of input voltage.
 	configLocation->timeoutLCPreCharge												     = 1.5*1000;								// Precharge error timeout, allow 1.5 seconds pre-charge time before declaring load error.
 	configLocation->maxAllowedCurrent													     = 1000.0f;									// Allow max XXXA trough BMS.
 	configLocation->allowedTempBattDischargingMax                  = 105.0f;                   // Max battery temperature where discharging is still allowed
